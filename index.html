@@ -4,69 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <title>Room Information</title>
 </head>
 <body>
     <div class="container">
-      <form action="https://script.google.com/macros/s/AKfycbylD2qH8afkP_5U6fNvCXG4Ny2HEEH8gzuNx_DjA-NHqbEpUcAa5k4VcZxV7peRxbfLVA/exec" method="post">
-        <h2>Room Information</h2>
-        <div class="form-group">
-          <label for="roomCode">Room Code:</label>
-          <input type="text" id="roomCode" name="roomCode">
-        </div>
-        <div class="form-group">
-          <label for="rent">Rent:</label>
-          <input type="text" id="rent" name="rent">
-        </div>
-        <div class="form-group">
-          <label for="water">Water:</label>
-          <input type="text" id="water" name="water">
-        </div>
-        <div class="form-group">
-          <label for="cleanliness">Cleanliness:</label>
-          <input type="text" id="cleanliness" name="cleanliness">
-        </div>
-        <div class="form-group">
-          <label for="units">Units:</label>
-          <input type="text" id="units" name="units">
-        </div>
-        <div class="form-group">
-          <label for="unitsConsumed">Units Consumed:</label>
-          <input type="text" id="unitsConsumed" name="unitsConsumed">
-        </div>
-        <div class="form-group">
-          <label for="unitPrice">Unit Price:</label>
-          <input type="text" id="unitPrice" name="unitPrice">
-        </div>
-        <div class="form-group">
-          <label for="electricityPrice">Electricity Price:</label>
-          <input type="text" id="electricityPrice" name="electricityPrice">
-        </div>
-        <div class="form-group">
-          <label for="fine">Fine:</label>
-          <input type="text" id="fine" name="fine">
-        </div>
-        <div class="form-group">
-          <label for="month">Month:</label>
-          <select id="month" name="month">
-            <option value="January">January</option>
-            <option value="February">February</option>
-            <option value="March">March</option>
-            <option value="April">April</option>
-            <option value="May">May</option>
-            <option value="June">June</option>
-            <option value="July">July</option>
-            <option value="August">August</option>
-            <option value="September">September</option>
-            <option value="October">October</option>
-            <option value="November">November</option>
-            <option value="December">December</option>
-          </select>
-        </div>
-        <button type="submit" id="submitButton">Submit</button>
-        <div id="loader" class="loader" style="display: none;"></div>
-      </form>
+        <form action="https://script.google.com/macros/s/AKfycbylD2qH8afkP_5U6fNvCXG4Ny2HEEH8gzuNx_DjA-NHqbEpUcAa5k4VcZxV7peRxbfLVA/exec" method="post">
+            <h2>Room Information</h2>
+            <div class="form-group">
+              <label for="roomCode">Room Code:</label>
+              <select id="roomCode" name="roomCode" required>
+                  <option value="">Select a Room-No</option>
+                  <option value="Sheet1">Room1</option>
+                  <option value="Sheet2">Room2</option>
+                  <option value="Sheet3">Room3</option>
+                  <option value="Sheet4">Room4</option>
+                  <option value="Sheet5">Room5</option>
+                  <option value="Sheet6">Room6</option>
+                  <option value="Sheet7">Room7</option>
+              </select>
+          </div>
+            <div class="form-group">
+                <label for="rent">Rent:</label>
+               
+                <input type="number" id="rent" min="0" name="rent" required>
+            </div>
+            <div class="form-group">
+                <label for="water">Water:</label>
+                <input type="number" id="water" min="0" name="water" required>
+            </div>
+            <div class="form-group">
+                <label for="cleanliness">Cleanliness:</label>
+                <input type="number" id="cleanliness" min="0" name="cleanliness" required>
+            </div>
+            <div class="form-group">
+                <label for="units">Units:</label>
+                <input type="number" id="units" min="0" name="units" required>
+            </div>
+            <div class="form-group">
+                <label for="unitsConsumed">Units Consumed:</label>
+                <input type="number" id="unitsConsumed" min="0" name="unitsConsumed" required>
+            </div>
+            <div class="form-group">
+                <label for="unitPrice">Unit Price:</label>
+                <input type="number" id="unitPrice" min="0" name="unitPrice" required>
+            </div>
+            <div class="form-group">
+                <label for="electricityPrice">Electricity Price:</label>
+                <input type="number" id="electricityPrice" min="0" name="electricityPrice" required>
+            </div>
+            <div class="form-group">
+                <label for="fine">Fine:</label>
+                <input type="number" id="fine" min="0" name="fine" required>
+            </div>
+            <div class="form-group">
+                <label for="month">Month:</label>
+                <select id="month" name="month" required>
+                    <option value="">Select a month</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+            </div>
+            <!-- <button type="submit" id="submitButton">Submit</button> -->
+            <button type="submit" id="submitButton" disabled>Submit</button>
+            <div id="loader" class="loader" style="display: none;"></div>
+        </form>
     </div>
     <script src="index.js"></script>
-  </body>
+</body>
 </html>
